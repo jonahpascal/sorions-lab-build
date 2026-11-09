@@ -1,0 +1,93 @@
+[
+  {
+    "id": "midi-overlay",
+    "title": "MIDI Chord Overlay",
+    "tagline": "HUD transparent & analyse d'accords MIDI en temps réel",
+    "category": "Système / Audio",
+    "badge": "v1.0 Windows",
+    "description": "HUD 100% transparent et click-through par-dessus tes logiciels de production musicale (Ableton, FL Studio, Reaper, Studio One). Détection instantanée des accords, enrichissements jazz et inversions sans latence ni fenêtre parasite.",
+    "techStack": ["Python", "PyQt6", "Win32 API", "Mido", "Pygame MIDI"],
+    "status": "available",
+    "specs": "0.0% CPU • ~71 MB RAM",
+    "downloadUrl": "/downloads/MIDI_Chord_Overlay.exe",
+    "version": "1.0.0",
+    "releaseDate": "2026-11-09",
+    "features": [
+      "Transparence totale et click-through matériel via Win32 extended window styles (WS_EX_LAYERED, WS_EX_TRANSPARENT)",
+      "Mode repositionnement et redimensionnement rapide : Maintenir Shift + Glisser / Molette de souris",
+      "Reconnaissance harmonique avancée : triades, 7th, 9th, dim, sus, accords altérés et détection de basse inversée (/Bass)",
+      "Réduction en zone de notification système (System Tray) avec raccourci de fermeture rapide",
+      "Sauvegarde automatique de la position de la fenêtre et des préférences de dimensionnement"
+    ],
+    "installationGuide": [
+      "Télécharger le binaire exécutable 'MIDI_Chord_Overlay.exe'.",
+      "Placer le fichier dans un dossier de ton choix (ex: C:\\Tools\\SorionsLab\\).",
+      "Lancer l'application : elle s'initialise directement au premier plan.",
+      "Ouvrir votre DAW avec votre contrôleur MIDI branché. L'accord joué apparaît immédiatement en surimpression."
+    ],
+    "benchmarks": {
+      "Conso CPU": "0.0% en veille (0.1% pic)",
+      "Mémoire Vive (RAM)": "71.3 MB (Working Set réel)",
+      "Latence de traitement": "< 0.2 ms",
+      "Taille binaire": "51.8 MB (Standalone PyInstaller)"
+    }
+  },
+  {
+    "id": "kernel-dock",
+    "title": "HyperDock Shell",
+    "tagline": "Lanceur de commandes ultra-minimaliste pour workflows denses",
+    "category": "Productivité / OS",
+    "badge": "En dev",
+    "description": "Palette de commande ultra-rapide et lanceur d'automatisation avec exécution de scripts asynchrones, widgets système légers et gestionnaire de raccourcis globaux.",
+    "techStack": ["Rust", "Tauri v2", "TypeScript", "Tailwind CSS"],
+    "status": "in-progress",
+    "specs": "Cross-platform • 2MB binaire",
+    "version": "0.4.0",
+    "releaseDate": "2026-11-01",
+    "features": [
+      "Ouverture instantanée en moins de 10ms via raccourci global paramétrable (Alt + Espace)",
+      "Exécution asynchrone sans gel d'interface de scripts PowerShell, Python et Bash",
+      "Indexation locale des dossiers projets, binaires et chemins de fichiers favoris",
+      "Interface épurée noire et blanche sans aucune animation superflue"
+    ],
+    "installationGuide": [
+      "Binaire en cours de compilation pour Windows et Linux.",
+      "Le code source sera accessible via le dépôt GitHub de Sorions Lab."
+    ],
+    "benchmarks": {
+      "Conso CPU": "0% en veille",
+      "Mémoire Vive": "8.5 MB",
+      "Temps d'ouverture": "< 12 ms",
+      "Taille binaire": "2.4 MB"
+    }
+  },
+  {
+    "id": "stream-relay",
+    "title": "SubZero Relay",
+    "tagline": "Passerelle WebRTC locale zéro-configuration",
+    "category": "Réseau / Protocoles",
+    "badge": "Expérimental",
+    "description": "Passerelle locale P2P pour synchroniser instantanément des flux de données télémétriques, signaux OSC et événements MIDI entre deux machines sur le même réseau local sans configuration routeur.",
+    "techStack": ["Go", "WebSockets", "WebRTC", "Pion"],
+    "status": "concept",
+    "specs": "Zero config • Chiffrement E2E",
+    "version": "0.1.2",
+    "releaseDate": "2026-10-15",
+    "features": [
+      "Découverte automatique des pairs (mDNS / Zeroconf) sur le réseau local",
+      "Chiffrement de bout en bout des paquets de données",
+      "Conversion bidirectionnelle transparente OSC <-> WebSocket <-> MIDI",
+      "Mode binaire autonome headless pour serveurs domestiques"
+    ],
+    "installationGuide": [
+      "Cloner le binaire Go ou lancer le conteneur Docker léger.",
+      "Lancer 'subzero-relay --port 8080' sur les deux postes à interconnecter."
+    ],
+    "benchmarks": {
+      "Conso CPU": "< 0.05%",
+      "Mémoire Vive": "6.1 MB",
+      "Latence réseau LAN": "< 0.8 ms",
+      "Taille binaire": "4.1 MB"
+    }
+  }
+]
